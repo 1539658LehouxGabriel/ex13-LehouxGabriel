@@ -1,0 +1,40 @@
+html, body{
+    background-color: aqua;
+    text-shadow: 2px black;
+}
+
+.banniere:hover {
+    transition-property: all;
+    transform: skewX(35deg);
+}
+
+body {
+    padding: 0;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    animation: bg-animation 1s infinite alternate;
+    display: inline-block;
+}
+
+.block-1 {
+    --bg-1: #1989AC;
+    --bg-2: #283E56;
+}
+
+.block-2 {
+    --bg-1: #F12B6B;
+    --bg-2: #970747;
+}
+
+@keyframes bg-animation {
+    from {
+        background: var(--bg-1);
+    }
+
+    to {
+        background: var(--bg-2);
+    }
+}
